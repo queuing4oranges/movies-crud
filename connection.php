@@ -4,7 +4,7 @@
 2. php -S localhost:8080 (then in browser: localhost:8080/connection.php)
 */
 
-//stop error reporting and takes the custom ones
+//stop error reporting and use the custom ones
 error_reporting(0);
 
 //setting up DB credentials
@@ -19,6 +19,7 @@ $connection = mysqli_connect($server_name, $mysql_username, $mysql_password, $db
 //checking connection + displaying msg
 if (!$connection) {
     echo '{"message":"Ooops, unable to connect to database"}';
+
     //stop when not able to connect:
     die();
 } else {
